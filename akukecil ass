@@ -1,1 +1,63 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
+local Window = Rayfield:CreateWindow({
+   Name = "test test",
+   Icon = 0, -- Use 0 for no icon
+   LoadingTitle = "REQUIRES DOUBLE CHEESEBURGER GAMEPASS",
+   LoadingSubtitle = "made by ohdbloxguy232",
+   ShowText = "hiitjdjs", -- for mobile users to unhide rayfield, change if you'd like
+   Theme = "AmberGlow",
+
+   ToggleUIKeybind = "L",
+
+   DisableRayfieldPrompts = true,
+   DisableBuildWarnings = false,
+
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil,
+      FileName = "Big Hub"
+   },
+
+   Discord = {
+      Enabled = false,
+      Invite = "noinvitelink",
+      RememberJoins = true
+   },
+
+   KeySystem = false,
+   KeySettings = {
+      Title = "security",
+      Subtitle = "hi there",
+      Note = "this is security because yes",
+      FileName = "hi",
+      SaveKey = true,
+      GrabKeyFromSite = false,
+      Key = {"WindsOfFjords"}
+   }
+})
+
+local Tab = Window:CreateTab("very rare and gamepass item", 4483362458) -- Title, Image
+local Section = Tab:CreateSection("Careful using this as you are very easy to be suspected by OG players")
+
+
+local Toggle = Tab:CreateToggle({
+   Name = "15 BULLET PER SHOT",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file; make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(false)
+   local garbage = getgc(true)
+
+
+
+for i, table in pairs(garbage) do
+
+if type(table) == "table" and rawget(table, "ProjectilePerShot") then
+
+rawset(table, "ProjectilePerShot", 15)
+
+end
+
+end
+   end,
+})
