@@ -59,5 +59,6 @@ rawset(table, "ProjectilePerShot", 15)
 end
 
 end
+
    end,
 })
